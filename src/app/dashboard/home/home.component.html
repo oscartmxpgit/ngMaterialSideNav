@@ -1,1 +1,30 @@
-<p>home works!</p>
+
+
+
+<h1 class="heading"><strong>Celebraciones </strong> </h1>
+
+<p>{{info_calendar.date}}</p>
+<p>{{info_calendar.season}}</p>
+<p>{{info_calendar.season_week}}</p>
+
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>colour</th>
+      <th>rank</th>
+      <th>rank_num</th>
+      <th>title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let info of info_calendar.celebrations;">
+      <td>{{info.colour}}</td>
+      <td>{{info.rank}}</td>
+      <td>{{info.rank_num}}</td>
+      <td>{{info.title}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre>{{info_calendar | json}}</pre>
